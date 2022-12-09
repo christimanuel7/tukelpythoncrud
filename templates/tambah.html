@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aplikasi CRUD Data Mahasiswa </title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="col-sm-5">
+            <h2>Tambah Data Mahasiswa</h2>
+                <form action="{{ url_for('tambah') }}" method="post">
+                    <div class="form-group">
+                        <label>NIM Mahasiswa:</label>
+                        <input type="number" name="nim_mahasiswa" class="form-control" placeholder="Masukan NIM Mahasiswa" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Nama Mahasiswa:</label>
+                        <input type="text" name="nama" class="form-control" placeholder="Masukan Nama Mahasiswa" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Kelompok:</label>
+                        <input type="number" name="kelompok" class="form-control" placeholder="Masukan Nama Kelompok" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Jurusan:</label>
+                        <input type="text" name="jurusan" class="form-control" placeholder="Masukan Jurusan Mahasiswa" required />
+                    </div>
+                    <button type="submit" id="Submit" name="submit" class="btn btn-primary">Tambah Data Mahasiswa</button>
+                </form>
+        </div>
+    </div>
+</body>
+</html>
